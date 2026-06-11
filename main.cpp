@@ -8,8 +8,10 @@ int main(){
     do{
     cout<<"1-Selection Sort\n2-Bubble Sort\n3-Insertion Sort\n4-Merge Sort\n5-Quick Sort\n6-Heap Sort\n7-Counting Sort\n8-Radix Sort\n9-Bucket Sort\n10-Shell Sort\n11-Tree Sort\n0-Exit"<<endl;    
     cin>>choice;
-//     if(choice==0)
-//         break;
+    if(choice==0){
+        cout<<"Exiting the program! Bye!"<<endl<<"Will be back soon with more sorting algorithms!!"<<endl;
+        break;
+    }
     cout<<"Enter the number of elements of the array: ";
     cin>>n;
     vector<int> arr(n),list(n);
@@ -18,9 +20,6 @@ int main(){
         cin>> arr[i];
     }
     switch(choice){
-        case 0: 
-                cout<<"Exiting the program! Bye!"<<endl<<"Will be back soon with more sorting algorithms!!"<<endl;
-                break;
         case 1: //selection sort
                 list=selectionsort(arr);
                 cout<<"Sorted array using Selection Sort: ";
